@@ -20,6 +20,7 @@ header{
   border-radius: 20px;
   display: flex;
   justify-content: end;
+  
 }
 
 nav{
@@ -79,21 +80,22 @@ nav ul a li{
 
 #main .about{
   position: relative;
-  top: 300px;
+  top: 250px;
   width: 500px;
   z-index: 10;
+  left: 130px;
 }
 
 #main .about h2{
   font-family: 'Bungee Inline', cursive;
   font-style: italic;
-  font-size: 40px;
-  
+  font-size: 45px;
 }
 
 #main .about p{
   font-family: 'Fuzzy Bubbles', cursive;
-  font-size: 22px;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 #main .about a{
@@ -126,8 +128,179 @@ nav ul a li{
   right: -220px;
   z-index: 1;
   
+}
+
+#main .semaforo{
+  width: 9px;
+  height: 18px;
+  position: relative;
+  top: 77px;
+  left: 354px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  padding-top: 1px;
+  border-radius: 15px;
+}
+
+#main .rojo{
+  /* background-color: red; */
+  height: 9px;
+  width: 9px;
+  background-color: rgb(72, 38, 38);
+  border-radius: 100%;
+  /* margin-right: 0.1px; */
+  border: black 0.7px solid;
+  animation: rojo 7s infinite;
+}
+
+@keyframes rojo {
+
+  59%{
+    background-color: rgb(72, 38, 38);
+  }
+  60%{
+    background-color: red;
+  }
+
+  99%{
+    background-color: red;
+  }
   
 }
+
+#main .amarillo{
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: #4a4231;
+  /* margin-right: 0.5px; */
+  border: black 0.7px solid;
+  animation: amarillo 7s infinite;
+}
+
+@keyframes amarillo{
+
+  39%{
+    background-color: #4a4231;
+  }
+  40%{
+    background-color: #eda303;
+  }
+
+  59%{
+    background-color: #eda303;
+  }
+
+  60%{
+    background-color: #4a4231;
+  }
+}
+
+#main .verde{
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: #07F791;
+  /* margin-right: 0.5px; */
+  border: black 1px solid;
+  animation: verde 7s infinite;
+}
+
+@keyframes verde {
+
+  39%{
+    background-color: #07F791
+  }
+  40%{
+    background-color: #233a30;
+  }
+
+  99%{
+    background-color: #233a30;
+  }
+
+   100%{
+    background-color: #07F791;
+  } 
+}
+
+#main .dos{
+  position: relative;
+  left: 220px;
+  top: 67px;
+  width: 6px;
+}
+
+#main .rojo-dos{
+  height: 7px;
+  width: 7px;
+  background-color: rgb(72, 38, 38);
+  border-radius: 100%;
+  /* margin-right: 0.1px; */
+  border: black 0.5px solid;
+  animation: rojo 7s infinite;
+}
+
+#main .amarillo-dos{
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background-color: #4a4231;
+  /* margin-right: 0.5px; */
+  border: black 0.5px solid;
+  animation: amarillo 7s infinite;
+}
+
+#main .verde-dos{
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background-color: #07F791;
+  /* margin-right: 0.5px; */
+  border: black 0.5px solid;
+  animation: verde 7s infinite;
+}
+
+#main .tres{
+  width: 6px;
+  position: relative;
+  left: 406px;
+  top: 68px;
+}
+
+#main .rojo-tres{
+  height: 7px;
+  width: 7px;
+  background-color: rgb(72, 38, 38);
+  border-radius: 100%;
+  /* margin-right: 0.1px; */
+  border: black 0.5px solid;
+  animation: rojo 7s infinite;
+}
+
+#main .amarillo-tres{
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background-color: #4a4231;
+  /* margin-right: 0.5px; */
+  border: black 0.5px solid;
+  animation: amarillo 7s infinite;
+}
+
+#main .verde-tres{
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background-color: #07F791;
+  /* margin-right: 0.5px; */
+  border: black 0.5px solid;
+  animation: verde 7s infinite;
+}
+
+
 
 
 #main h1{
@@ -151,59 +324,112 @@ nav ul a li{
 #main .img h2{
   background-color: transparent;
   position: relative;
-  top: 353px;
+  top: 267px;
   left: 200px;
   width: 360px;
   font-size: 36px;
-  color: #07F791;
+  color: hsl(155, 94%, 40%);
   font-style:italic;
-  -webkit-text-stroke: 1px #7F05AB;
+  -webkit-text-stroke: 1px hsla(284, 94%, 34%, 1);
   font-family: 'Bungee Inline', cursive;
-  animation:  luzOn 3s linear infinite alternate-reverse ;
+  animation:  luzOn 7s linear infinite reverse ;
 
 }
 
 @keyframes luzOn {
   10%{
     -webkit-text-stroke: 1px hsla(284, 94%, 34%, 1);
-    color: hsla(154, 94%, 49%, 1);
+    color: 	hsl(155, 96%, 60%);
   }
   20%{
-    -webkit-text-stroke: 1px hsla(284, 94%, 34%, 1);
-    color: hsla(154, 94%, 49%, 1);
+    -webkit-text-stroke: 1px hsla(284, 94%, 40%, 1);
+    color: hsl(155, 94%, 40%);
   }
   30%{
     -webkit-text-stroke: 1px hsla(284, 94%, 34%, 1);
-    color: hsla(154, 94%, 49%, 1);
+    color: hsl(155, 96%, 60%);
   }
   40%{
     -webkit-text-stroke: 1px hsla(284, 94%, 40%, 1);
-    color: hsla(154, 94%, 50%, 1);
+    color: hsl(155, 94%, 40%);
   }
   50%{
-    -webkit-text-stroke: 1px hsla(284, 94%, 45%, 1);
-    color: hsla(154, 94%, 50%, 1);
+    -webkit-text-stroke: 1px hsla(284, 94%, 34%, 1);
+    color: hsl(155, 96%, 60%);
   }
   60%{
-    -webkit-text-stroke: 1px hsla(284, 94%, 50%, 1);
-    color: hsla(154, 94%, 50%, 1);
+    -webkit-text-stroke: 1px hsla(284, 94%, 60%, 1);
+    color: hsl(310, 94%, 50%);
     
   }
   70%{
-    -webkit-text-stroke: 1px hsla(284, 94%, 55%, 1);
-    color: hsla(154, 94%, 50%, 1);
+    -webkit-text-stroke: 1px hsla(284, 94%, 34%, 1);
+    color: hsl(310, 94%, 50%);
   }
   80%{
-    -webkit-text-stroke: 1px hsla(284, 94%, 60%, 1);
-    color: hsla(154, 94%, 55%, 1);
+    -webkit-text-stroke: 1px hsla(284, 94%, 55%, 1);
+    color: hsl(310, 94%, 50%);
   }
   90%{
-    -webkit-text-stroke: 1px hsla(284, 94%, 65%, 1);
-    color: hsla(154, 94%, 55%, 1);
+    -webkit-text-stroke: 1px hsla(284, 94%, 34%, 1);
+    color: hsl(310, 94%, 50%);
   }
   100%{
-    -webkit-text-stroke: 1px hsla(284, 94%, 34%, 1);
-    color: hsla(154, 94%, 49%, 1);
+    -webkit-text-stroke: 1px hsla(284, 94%, 65%, 1);
+    color: 	hsl(310, 94%, 50%);
   }
 }
 
+/* Project Section */
+
+#projects{
+  width: 100%;
+  border: #7F05AB 15px double;
+  margin-top: 13px;
+  border-radius: 15px;
+  border-bottom: none;
+}
+
+#projects .container{
+  max-width: 1650px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 120px;
+  flex-wrap: wrap;
+}
+
+
+#projects .project {
+  width: 400px;
+}
+
+
+#projects .project h2{
+  font-size: 40px;
+  color:  hsl(155, 94%, 60%);
+  font-style:italic;
+  -webkit-text-stroke: 1px #7F05AB;
+  font-family: 'Bungee Inline', cursive;
+  animation:  luzOn 4s linear infinite reverse ;
+}
+
+#projects .project img {
+  width: 400px;
+}
+
+#projects .project p{
+  font-family: 'Fuzzy Bubbles', cursive;
+  font-size: 25px;
+  font-weight: bold;
+  color:#0EAB68;
+}
+
+/* Skills Section */
+
+#skills {
+  border: #0EAB68 15px double;
+  height: 800px;
+  border-radius: 15px;
+  border-top: none;
+}
