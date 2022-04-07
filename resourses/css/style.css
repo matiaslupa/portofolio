@@ -1,12 +1,16 @@
 html {
     box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.915);
+    
     
   }
   *,
   *:before,
   *:after {
     box-sizing: inherit;
+  }
+
+  body{
+    background-color: rgba(0, 0, 0, 0.915);
   }
 
 /* Header Section */
@@ -333,7 +337,16 @@ nav ul a li{
   -webkit-text-stroke: 1px hsla(284, 94%, 34%, 1);
   font-family: 'Bungee Inline', cursive;
   animation:  luzOn 7s linear infinite reverse ;
+}
 
+#main .img p{
+  font-family: 'Fuzzy Bubbles', cursive;
+  font-size: 19px;
+  font-weight: bold;
+  position: relative;
+  top: 382px;
+  width: 400px;
+  left: 10px;
 }
 
 @keyframes luzOn {
@@ -380,13 +393,17 @@ nav ul a li{
   }
 }
 
+
+
 /* Project Section */
 
 #projects{
   width: 100%;
   border: #7F05AB 15px double;
   margin-top: 13px;
-  border-radius: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  
   border-bottom: none;
 }
 
@@ -407,11 +424,33 @@ nav ul a li{
 
 #projects .project h2{
   font-size: 40px;
-  color:  hsl(155, 94%, 60%);
+  color:  hsl(155, 94%, 40%);
   font-style:italic;
-  -webkit-text-stroke: 1px #7F05AB;
+  -webkit-text-stroke: 1px hsla(284, 94%, 40%, 1);
   font-family: 'Bungee Inline', cursive;
-  animation:  luzOn 4s linear infinite reverse ;
+  animation:  projectLuz 6s linear infinite ;
+}
+
+@keyframes projectLuz {
+  20%{
+    -webkit-text-stroke: 1px hsla(284, 94%, 34%, 1);
+    color: 	hsl(155, 96%, 60%);
+  }
+  40%{
+    -webkit-text-stroke: 1px hsla(284, 94%, 40%, 1);
+    color: hsl(155, 94%, 40%);
+  }
+  60%{
+    -webkit-text-stroke: 1px hsla(284, 94%, 34%, 1);
+    color: hsl(155, 96%, 60%);
+  }
+  80%{
+    -webkit-text-stroke: 1px hsla(284, 94%, 40%, 1);
+    color: hsl(155, 94%, 40%);
+  }
+
+  
+  
 }
 
 #projects .project img {
@@ -429,7 +468,131 @@ nav ul a li{
 
 #skills {
   border: #0EAB68 15px double;
-  height: 800px;
-  border-radius: 15px;
   border-top: none;
+  display: flex;
+  flex-direction: column;
+  border-bottom: none;
+  border-bottom-left-radius: none;
+  border-bottom-right-radius: none;
 }
+
+#skills h2{
+  font-size: 40px;
+  color: hsl(310, 94%, 50%);
+  font-style:italic;
+  -webkit-text-stroke: 1px hsla(284, 94%, 34%, 1);
+  font-family: 'Bungee Inline', cursive;
+  animation:  skillsLuz 4s linear infinite;
+  padding-top: 100px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+@keyframes skillsLuz {
+  
+  20%{
+    -webkit-text-stroke: 1px hsla(284, 94%, 60%, 1);
+    color: hsl(310, 94%, 50%);
+    
+  }
+  40%{
+    -webkit-text-stroke: 1px hsla(284, 94%, 34%, 1);
+    color: hsl(310, 94%, 50%);
+  }
+  60%{
+    -webkit-text-stroke: 1px hsla(284, 94%, 55%, 1);
+    color: hsl(310, 94%, 50%);
+  }
+  80%{
+    -webkit-text-stroke: 1px hsla(284, 94%, 34%, 1);
+    color: hsl(310, 94%, 50%);
+  }
+  100%{
+    -webkit-text-stroke: 1px hsla(284, 94%, 65%, 1);
+    color: 	hsl(310, 94%, 50%);
+  }
+}
+
+#skills .skills-container{
+  display: flex;
+  justify-content: space-around;
+  background-color: #411e57;
+  margin: auto;
+  flex-wrap: wrap;
+  max-width:800px;
+  border-radius: 15px;
+  margin-bottom: 100px;
+
+}
+
+#skills .skill{
+  width: 150px;
+  height: auto;
+  overflow: hidden;
+}
+
+#skills img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+#skills .git {
+  width: 110px;
+  margin: 20px auto;
+  
+}
+
+#skills .github{
+  width: 110px;
+  margin: 20px auto;
+
+}
+
+#skills .css{
+  width: 120px;
+  padding: 19px;
+  
+}
+
+#skills .html{
+  width: 180px;
+  padding: 20px;
+}
+
+#skills .java{
+  margin-top: 20px;
+}
+
+#skills .tres{
+  width: 180px;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+#skills p{
+  color: #eda303;
+  font-family: 'Fuzzy Bubbles', cursive;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  
+  
+}
+
+#skills .made {
+  text-decoration: underline;
+}
+
+#skills .heart {
+  color: red;
+}
+
+#skills .cba {
+  color: #eda303;
+}
+
+
+
