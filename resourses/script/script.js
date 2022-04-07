@@ -1,10 +1,51 @@
-let element = document.querySelector('ul').children[0].children[0];
+const btnSwitch = document.querySelector('.switch');
 
-function turnButtonRed() {
-  // Add code to turn button red
-  element.style.backgroundColor = 'red';
-  element.style.color = 'white';
-  element.innerHTML = 'Red Button';
-}
+btnSwitch.addEventListener('click', () => {
+  document.body.classList.toggle('light');
+  btnSwitch.classList.toggle('active');
+});
 
-element.onclick = turnButtonRed;
+const btnDownFender = document.querySelector('.btnDownFender');
+
+const btnDownHusqvarna = document.querySelector('.btnDownHusqvarna');
+
+const btnDownTea = document.querySelector('.btnDownTea');
+
+const fenderDescription = document.querySelector('.fenderDescription');
+
+const husqvarnaDescription = document.querySelector('.husqvarnaDescription');
+
+const teaDescription = document.querySelector('.teaDescription');
+
+btnDownFender.addEventListener('click', () => {
+  fenderDescription.style.display = 'block';
+  btnDownFender.style.display = 'none';
+
+  btnDownHusqvarna.style.display = 'block';
+  husqvarnaDescription.style.display = 'none';
+
+  teaDescription.style.display = 'none';
+  btnDownTea.style.display = 'block';
+});
+
+btnDownHusqvarna.addEventListener('click', () => {
+  husqvarnaDescription.style.display = 'block';
+  btnDownHusqvarna.style.display = 'none';
+
+  btnDownFender.style.display = 'block';
+  fenderDescription.style.display = 'none';
+
+  btnDownTea.style.display = 'block';
+  teaDescription.style.display = 'none';
+});
+
+btnDownTea.addEventListener('click', () => {
+  btnDownTea.style.display = 'none';
+  teaDescription.style.display = 'block';
+
+  husqvarnaDescription.style.display = 'none';
+  btnDownHusqvarna.style.display = 'block';
+
+  btnDownFender.style.display = 'block';
+  fenderDescription.style.display = 'none';
+});

@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Lobster&family=Space+Mono&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,18 +20,27 @@
       rel="stylesheet"
     />
     <script src="./resourses/script/script.js" defer></script>
-
     <title>My Portofolio</title>
   </head>
   <body>
     <!-- Header Section -->
     <header>
       <nav>
+
         <ul>
           <a href="#about"><li>About Me</li></a>
           <a href="#projects"><li>Projects</li></a>
           <a href="#skills"><li>Skills</li></a>
           <a href=""><li>Contact</li></a>
+          
+          <button class="switch">
+            <span class="material-icons-outlined">
+              nightlight_round
+              </span>
+            <span class="material-icons-outlined">
+              light_mode
+              </span>
+          </button>
         </ul>
       </nav>
     </header>
@@ -83,7 +93,10 @@
           <a href="https://matiaslupa.github.io/fender/" target="_blank"
             ><img src="./resourses/images/fender.png" alt="project"
           /></a>
-          <p>
+          <button class="down btnDownFender"><span class="material-icons-outlined arrow">
+            keyboard_double_arrow_down
+            </span></button>
+          <p class="fenderDescription">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe
             laudantium reiciendis repellat? Nostrum sint ipsa eius sequi veniam
             praesentium deserunt laudantium aspernatur ullam accusantium
@@ -95,7 +108,10 @@
           <a href="https://matiaslupa.github.io/husqvarna/" target="_blank"
             ><img src="./resourses/images/husq.png" alt="project"
           /></a>
-          <p>
+          <button class="down btnDownHusqvarna"><span class="material-icons-outlined arrow">
+            keyboard_double_arrow_down
+            </span></button>
+          <p class="husqvarnaDescription">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe
             laudantium reiciendis repellat? Nostrum sint ipsa eius sequi veniam
             praesentium deserunt laudantium aspernatur ullam accusantium
@@ -107,7 +123,10 @@
           <a href="https://matiaslupa.github.io/tea-cozy/" target="_blank"
             ><img src="./resourses/images/tea.png" alt="project"
           /></a>
-          <p>
+          <button class="down btnDownTea"><span class="material-icons-outlined arrow">
+            keyboard_double_arrow_down
+            </span></button>
+          <p class="teaDescription">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe
             laudantium reiciendis repellat? Nostrum sint ipsa eius sequi veniam
             praesentium deserunt laudantium aspernatur ullam accusantium

@@ -10,7 +10,12 @@ html {
   }
 
   body{
-    background-color: rgba(0, 0, 0, 0.915);
+    background-color: #121212;
+    transition: 0.5s ease all;
+  }
+
+  body.light {
+    background-color: rgb(254, 254, 254);
   }
 
 /* Header Section */
@@ -18,19 +23,70 @@ html {
 header{
   background-color: #BE20F7;
   height: 50px;
-  justify-content: space-between;
   margin: 50px;
   margin-bottom: 0px;
   border-radius: 20px;
   display: flex;
   justify-content: end;
+}
+
+header .switch {
+  background-color: #343D5B;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+  padding: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 67px;
+  justify-content: space-around;
+  margin-left: 30px;
+}
+
+header .switch::after{
+  content: "";
+  display: block;
+  width: 33px;
+  height: 33px;
+  position: absolute;
+  background: #F1F1F1;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  transition: .3s ease all;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+header .switch.active {
+  background-color: #eda303;
+  color: black;
   
 }
+
+.switch.active::after {
+  right: 0;
+  left: unset;
+  background-color: black;
+}
+
+header span{
+  width: 22px;
+  height: 22px;
+  display: block;
+  background: none;
+  color: white;
+  
+}
+
+
 
 nav{
   width: 500px;
   margin-right: 120px;
-  
   
 }
 
@@ -61,6 +117,12 @@ nav ul a li{
   font-size: 20px;
   text-align-last: center;
   color: white;
+}
+
+body.light nav ul a li{
+  color: #121212;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 /* Main Section */
@@ -156,7 +218,7 @@ nav ul a li{
   border-radius: 100%;
   /* margin-right: 0.1px; */
   border: black 0.7px solid;
-  animation: rojo 7s infinite;
+  animation: rojo 5s infinite;
 }
 
 @keyframes rojo {
@@ -181,7 +243,7 @@ nav ul a li{
   background-color: #4a4231;
   /* margin-right: 0.5px; */
   border: black 0.7px solid;
-  animation: amarillo 7s infinite;
+  animation: amarillo 5s infinite;
 }
 
 @keyframes amarillo{
@@ -209,7 +271,7 @@ nav ul a li{
   background-color: #07F791;
   /* margin-right: 0.5px; */
   border: black 1px solid;
-  animation: verde 7s infinite;
+  animation: verde 5s infinite;
 }
 
 @keyframes verde {
@@ -244,7 +306,7 @@ nav ul a li{
   border-radius: 100%;
   /* margin-right: 0.1px; */
   border: black 0.5px solid;
-  animation: rojo 7s infinite;
+  animation: rojo 5s infinite;
 }
 
 #main .amarillo-dos{
@@ -254,7 +316,7 @@ nav ul a li{
   background-color: #4a4231;
   /* margin-right: 0.5px; */
   border: black 0.5px solid;
-  animation: amarillo 7s infinite;
+  animation: amarillo 5s infinite;
 }
 
 #main .verde-dos{
@@ -264,7 +326,7 @@ nav ul a li{
   background-color: #07F791;
   /* margin-right: 0.5px; */
   border: black 0.5px solid;
-  animation: verde 7s infinite;
+  animation: verde 5s infinite;
 }
 
 #main .tres{
@@ -281,7 +343,7 @@ nav ul a li{
   border-radius: 100%;
   /* margin-right: 0.1px; */
   border: black 0.5px solid;
-  animation: rojo 7s infinite;
+  animation: rojo 5s infinite;
 }
 
 #main .amarillo-tres{
@@ -291,7 +353,7 @@ nav ul a li{
   background-color: #4a4231;
   /* margin-right: 0.5px; */
   border: black 0.5px solid;
-  animation: amarillo 7s infinite;
+  animation: amarillo 5s infinite;
 }
 
 #main .verde-tres{
@@ -301,7 +363,7 @@ nav ul a li{
   background-color: #07F791;
   /* margin-right: 0.5px; */
   border: black 0.5px solid;
-  animation: verde 7s infinite;
+  animation: verde 5s infinite;
 }
 
 
@@ -462,6 +524,19 @@ nav ul a li{
   font-size: 25px;
   font-weight: bold;
   color:#0EAB68;
+  display: none;
+}
+
+#projects .down {
+  background-color: #2e2727;
+  display: block;
+  margin: auto;
+  cursor: pointer;
+}
+
+#projects .arrow{
+  color: #0EAB68;
+  background-color: #2e2727;
 }
 
 /* Skills Section */
@@ -525,6 +600,10 @@ nav ul a li{
 
 }
 
+body.light #skills .skills-container{
+  background-color: transparent;
+}
+
 #skills .skill{
   width: 150px;
   height: auto;
@@ -572,14 +651,16 @@ nav ul a li{
 }
 
 #skills p{
-  color: #eda303;
+  color: #F7BC39;
   font-family: 'Fuzzy Bubbles', cursive;
   font-size: 25px;
   font-weight: bold;
   text-align: center;
   margin-bottom: 10px;
-  
-  
+}
+
+body.light #skills p{
+  color: hsl(310, 94%, 50%);
 }
 
 #skills .made {
@@ -591,8 +672,14 @@ nav ul a li{
 }
 
 #skills .cba {
-  color: #eda303;
+  color: #F7BC39;
 }
+
+body.light #skills .cba{
+  color: hsl(310, 94%, 50%);
+}
+
+
 
 
 
