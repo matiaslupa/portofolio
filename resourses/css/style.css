@@ -30,6 +30,10 @@ header{
   justify-content: end;
 }
 
+body.light header {
+  background-color: #F5795B;
+}
+
 header .switch {
   background-color: #343D5B;
   border-radius: 1000px;
@@ -62,7 +66,7 @@ header .switch::after{
 }
 
 header .switch.active {
-  background-color: #eda303;
+  background-color: #7D4EF5;
   color: black;
   
 }
@@ -70,7 +74,7 @@ header .switch.active {
 .switch.active::after {
   right: 0;
   left: unset;
-  background-color: black;
+  background-color: #855de9;
 }
 
 header span{
@@ -116,11 +120,12 @@ nav ul a li{
   text-align: center;
   font-size: 20px;
   text-align-last: center;
-  color: white;
+  color: rgb(255, 256, 256);
+  font-weight: 600;
 }
 
 body.light nav ul a li{
-  color: #121212;
+  color: #1f0658;
   font-size: 20px;
   font-weight: 700;
 }
@@ -144,6 +149,11 @@ body.light nav ul a li{
   justify-content: space-around;
 }
 
+body.light #main .yellow{
+  background-color: #42F5BA;
+  border: #42F5BA 5px solid;
+}
+
 #main .about{
   position: relative;
   top: 250px;
@@ -158,14 +168,27 @@ body.light nav ul a li{
   font-size: 45px;
 }
 
+body.light #main .about h2{
+  color: #1f0658;
+}
+
 #main .about p{
   font-family: 'Fuzzy Bubbles', cursive;
   font-size: 25px;
   font-weight: bold;
 }
 
+body.light #main .about p{
+  color: #1f0658;
+}
+
+
 #main .about a{
   color: #7F05AB;
+}
+
+body.light #main .about a{
+  color: #5213f3;
 }
 
 
@@ -177,7 +200,10 @@ body.light nav ul a li{
   top: 297px;
   left: 170px;
   border-radius: 20px;
- 
+}
+
+body.light #main .lineas{
+  border-color: #7D4EF5;
 }
 
 #main .img{
@@ -194,6 +220,10 @@ body.light nav ul a li{
   right: -220px;
   z-index: 1;
   
+}
+
+body.light #main .img{
+  border-color: #F56745;
 }
 
 #main .semaforo{
@@ -387,6 +417,14 @@ body.light nav ul a li{
   font-family: 'Bungee Inline', cursive;
 }
 
+body.light #main h1{
+  background-color: #7D4EF5;
+  color: #7D4EF5;
+  -webkit-text-stroke: 1px #F56745;
+  border-color: #7D4EF5;
+  text-shadow: 3px 3px #42F5BA;
+}
+
 #main .img h2{
   background-color: transparent;
   position: relative;
@@ -399,6 +437,95 @@ body.light nav ul a li{
   -webkit-text-stroke: 1px hsla(284, 94%, 34%, 1);
   font-family: 'Bungee Inline', cursive;
   animation:  luzOn 7s linear infinite reverse ;
+  text-shadow: 2.5px 2.5px hsl(310, 94%, 50%);
+  
+}
+
+@keyframes luzOn {
+  10%{
+    -webkit-text-stroke: 1px hsla(284, 94%, 34%, 1);
+    color: 	hsl(155, 96%, 60%);
+    text-shadow: -3px -3px hsl(310, 94%, 50%);
+  }
+  20%{
+    -webkit-text-stroke: 1px hsla(284, 94%, 40%, 1);
+    color: hsl(155, 94%, 40%);
+    text-shadow: -3px -3px hsl(310, 94%, 50%);
+  }
+  30%{
+    -webkit-text-stroke: 1px hsla(284, 94%, 34%, 1);
+    color: hsl(155, 96%, 60%);
+    text-shadow: -3px -3px hsl(310, 94%, 50%);
+  }
+  40%{
+    -webkit-text-stroke: 1px hsla(284, 94%, 40%, 1);
+    color: hsl(155, 94%, 40%);
+    text-shadow: -3px -3px hsl(310, 94%, 50%);
+  }
+  50%{
+    -webkit-text-stroke: 1px hsla(284, 94%, 34%, 1);
+    color: hsl(155, 96%, 60%);
+    text-shadow: -3px -3px hsl(310, 94%, 50%);
+  }
+  60%{
+    -webkit-text-stroke: 1px hsla(284, 94%, 60%, 1);
+    color: hsl(310, 94%, 50%);
+    text-shadow: 3px 3px hsl(155, 96%, 45%);
+    
+  }
+  70%{
+    -webkit-text-stroke: 1px hsla(284, 94%, 34%, 1);
+    color: hsl(310, 94%, 50%);
+    text-shadow: 3px 3px hsl(155, 96%, 45%);
+  }
+  80%{
+    -webkit-text-stroke: 1px hsla(284, 94%, 55%, 1);
+    color: hsl(310, 94%, 50%);
+    text-shadow: 3px 3px hsl(155, 96%, 45%);
+  }
+  90%{
+    -webkit-text-stroke: 1px hsla(284, 94%, 34%, 1);
+    color: hsl(310, 94%, 50%);
+    text-shadow: 3px 3px hsl(155, 96%, 45%);
+  }
+  100%{
+    -webkit-text-stroke: 1px hsla(284, 94%, 65%, 1);
+    color: 	hsl(310, 94%, 50%);
+    text-shadow: 3px 3px hsl(155, 96%, 45%);
+  }
+}
+
+body.light #main .img h2{
+  animation:  luz 7s linear infinite reverse ;
+  color: hsl(12, 79%, 60%);
+  -webkit-text-stroke: 1px hsl(257, 89%, 55%);
+  text-shadow: -4px -4px hsl(12, 90%, 50%);
+}
+
+@keyframes luz {
+  
+  20%{
+    color: hsl(12, 79%, 60%);
+  -webkit-text-stroke: 1px hsl(257, 89%, 50%);
+  text-shadow: -4px -4px hsl(12, 90%, 50%);
+    
+  }
+  40%{
+    color: hsl(12, 79%, 60%);
+  -webkit-text-stroke: 1px hsl(257, 89%, 55%);
+  text-shadow: -4px -4px hsl(12, 90%, 50%);
+  }
+  60%{
+    -webkit-text-stroke: 1px hsl(12, 90%, 50%);
+    color: hsl(258, 81%, 34%);
+    text-shadow: 4px 4px hsl(258, 90%, 47%);
+  }
+  90%{
+    -webkit-text-stroke: 1px hsl(12, 90%, 62%);
+    color: hsl(258, 81%, 40%);
+    text-shadow: 4px 4px hsl(258, 90%, 47%);
+  }
+  
 }
 
 #main .img p{
@@ -411,49 +538,11 @@ body.light nav ul a li{
   left: 10px;
 }
 
-@keyframes luzOn {
-  10%{
-    -webkit-text-stroke: 1px hsla(284, 94%, 34%, 1);
-    color: 	hsl(155, 96%, 60%);
-  }
-  20%{
-    -webkit-text-stroke: 1px hsla(284, 94%, 40%, 1);
-    color: hsl(155, 94%, 40%);
-  }
-  30%{
-    -webkit-text-stroke: 1px hsla(284, 94%, 34%, 1);
-    color: hsl(155, 96%, 60%);
-  }
-  40%{
-    -webkit-text-stroke: 1px hsla(284, 94%, 40%, 1);
-    color: hsl(155, 94%, 40%);
-  }
-  50%{
-    -webkit-text-stroke: 1px hsla(284, 94%, 34%, 1);
-    color: hsl(155, 96%, 60%);
-  }
-  60%{
-    -webkit-text-stroke: 1px hsla(284, 94%, 60%, 1);
-    color: hsl(310, 94%, 50%);
-    
-  }
-  70%{
-    -webkit-text-stroke: 1px hsla(284, 94%, 34%, 1);
-    color: hsl(310, 94%, 50%);
-  }
-  80%{
-    -webkit-text-stroke: 1px hsla(284, 94%, 55%, 1);
-    color: hsl(310, 94%, 50%);
-  }
-  90%{
-    -webkit-text-stroke: 1px hsla(284, 94%, 34%, 1);
-    color: hsl(310, 94%, 50%);
-  }
-  100%{
-    -webkit-text-stroke: 1px hsla(284, 94%, 65%, 1);
-    color: 	hsl(310, 94%, 50%);
-  }
+body.light #main .img p{
+  color: #1f0658;
 }
+
+
 
 
 
@@ -467,6 +556,11 @@ body.light nav ul a li{
   border-top-right-radius: 15px;
   
   border-bottom: none;
+}
+
+body.light #projects {
+  border-color: #F56745;
+  
 }
 
 #projects .container{
@@ -483,6 +577,12 @@ body.light nav ul a li{
   width: 400px;
 }
 
+body.light #projects .container {
+  background-color: #F5795B;
+  border-radius: 15px;
+  
+}
+
 
 #projects .project h2{
   font-size: 40px;
@@ -491,6 +591,7 @@ body.light nav ul a li{
   -webkit-text-stroke: 1px hsla(284, 94%, 40%, 1);
   font-family: 'Bungee Inline', cursive;
   animation:  projectLuz 6s linear infinite ;
+  text-shadow: 3px 3px hsl(155, 96%, 45%);
 }
 
 @keyframes projectLuz {
@@ -511,9 +612,39 @@ body.light nav ul a li{
     color: hsl(155, 94%, 40%);
   }
 
-  
-  
 }
+
+body.light #projects .project h2{
+
+  animation: none;
+  color: #ffffff;
+    -webkit-text-stroke: 1px #6533e2;
+    text-shadow: 2px 2px #ffffff;
+
+}
+
+/* @keyframes projectLuzLight {
+  
+  
+  49%{
+    color: hsl(12, 79%, 45%);
+    -webkit-text-stroke: 1px hsl(257, 89%, 20%);
+  }
+  50%{
+    color: hsl(12, 79%, 45%);
+    -webkit-text-stroke: 1px hsl(257, 89%, 20%);
+  }
+
+  100%{
+    color: hsl(12, 79%, 45%);
+    -webkit-text-stroke: 1px hsl(257, 89%, 20%);
+    
+    
+  }
+  
+} */
+
+
 
 #projects .project img {
   width: 400px;
@@ -522,33 +653,51 @@ body.light nav ul a li{
 #projects .project p{
   font-family: 'Fuzzy Bubbles', cursive;
   font-size: 25px;
-  font-weight: bold;
+  font-weight: 500;
   color:#0EAB68;
   display: none;
 }
+
+body.light #projects .project p {
+  color:#1f0658;
+  font-weight: 600;
+}
+
+
 
 #projects .down {
   background-color: #2e2727;
   display: block;
   margin: auto;
   cursor: pointer;
+  
 }
+
+
 
 #projects .arrow{
   color: #0EAB68;
   background-color: #2e2727;
 }
 
+body.light #projects .arrow{
+  color: #42F5BA;
+}
+
 /* Skills Section */
 
 #skills {
-  border: #0EAB68 15px double;
+  border: #7F05AB 15px double;
   border-top: none;
   display: flex;
   flex-direction: column;
   border-bottom: none;
   border-bottom-left-radius: none;
   border-bottom-right-radius: none;
+}
+
+body.light #skills{
+  border-color: #F56745;
 }
 
 #skills h2{
@@ -561,6 +710,7 @@ body.light nav ul a li{
   padding-top: 100px;
   text-align: center;
   margin-bottom: 5px;
+  text-shadow: 2px 2px hsl(155, 96%, 45%);
 }
 
 @keyframes skillsLuz {
@@ -569,10 +719,12 @@ body.light nav ul a li{
     -webkit-text-stroke: 1px hsla(284, 94%, 60%, 1);
     color: hsl(310, 94%, 50%);
     
+    
   }
   40%{
     -webkit-text-stroke: 1px hsla(284, 94%, 34%, 1);
     color: hsl(310, 94%, 50%);
+
   }
   60%{
     -webkit-text-stroke: 1px hsla(284, 94%, 55%, 1);
@@ -660,7 +812,7 @@ body.light #skills .skills-container{
 }
 
 body.light #skills p{
-  color: hsl(310, 94%, 50%);
+  color: #1f0658;
 }
 
 #skills .made {
@@ -676,7 +828,7 @@ body.light #skills p{
 }
 
 body.light #skills .cba{
-  color: hsl(310, 94%, 50%);
+  color: #1f0658;
 }
 
 
